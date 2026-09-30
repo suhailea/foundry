@@ -8,7 +8,7 @@ import { requireAuth } from './middleware/auth.js';
 export const app = new Hono();
 
 app.onError((err, c) => {
-  console.error('[api error]', err);
+  console.error('[api error] ', err);
   return c.json({ error: err.message }, 500);
 });
 
